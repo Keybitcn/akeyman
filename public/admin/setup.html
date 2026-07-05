@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>后台配置说明</title>
+    <title>配置说明</title>
     <link rel="stylesheet" href="cms.css" />
     <style>
       body {
@@ -25,38 +25,23 @@
       }
       pre { padding: 12px; overflow-x: auto; }
       a { color: #60a5fa; }
-      ol { padding-left: 20px; }
-      li { margin: 8px 0; }
       #origin { color: #93c5fd; }
     </style>
   </head>
   <body>
-    <h1>博客后台配置说明</h1>
-    <p>本站使用 Cloudflare + 自建 OAuth，<strong>不会</strong>走 Netlify 登录。</p>
+    <h1>内容管理配置说明</h1>
+    <p>本站使用 Cloudflare 自建登录，<strong>不会</strong>走 Netlify。</p>
 
-    <h2>1. 创建 GitHub OAuth 应用</h2>
-    <ol>
-      <li>打开 GitHub → Settings → Developer settings → OAuth Apps → New</li>
-      <li>Homepage URL：<code id="origin"></code></li>
-      <li>Authorization callback URL：<code id="callback"></code></li>
-      <li>记下 Client ID 和 Client Secret</li>
-    </ol>
-
-    <h2>2. Cloudflare Pages 环境变量</h2>
-    <p>项目 Settings → Environment variables → Production，添加：</p>
-    <pre>GITHUB_CLIENT_ID = 你的 Client ID
-GITHUB_CLIENT_SECRET = 你的 Client Secret
+    <h2>Cloudflare Pages 环境变量</h2>
+    <p>项目 Settings → Environment variables → Production：</p>
+    <pre>GITHUB_TOKEN = GitHub 个人访问令牌（需 repo 权限）
 ALLOWED_ORIGIN = quna.fun,www.quna.fun</pre>
-    <p>若只用单一域名访问，可只填一个，例如 <code id="allowed-origin"></code></p>
 
-    <h2>3. 重新部署后登录</h2>
-    <p><a href="/admin/">返回后台</a>，应跳转到 <code>/auth</code> 再跳转 GitHub，而不是 api.netlify.com。</p>
+    <h2>登录</h2>
+    <p><a href="/admin/">返回管理页</a>，访问 <code>/auth</code> 完成登录。</p>
 
     <script>
-      var origin = window.location.origin;
-      document.getElementById("origin").textContent = origin;
-      document.getElementById("callback").textContent = origin + "/callback";
-      document.getElementById("allowed-origin").textContent = window.location.hostname;
+      document.getElementById("origin");
     </script>
   </body>
 </html>
