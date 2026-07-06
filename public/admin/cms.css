@@ -19,6 +19,35 @@ html[data-theme="dark"],
   --hermes-fg: #f0f0f0;
   --hermes-muted: #a3a3a3;
   --hermes-border: #333333;
+
+  /* Toastify 深色主题 */
+  --toastify-color-light: #141414;
+  --toastify-color-dark: #141414;
+  --toastify-color-info: #3b82f6;
+  --toastify-color-success: #22c55e;
+  --toastify-color-warning: #eab308;
+  --toastify-color-error: #ef4444;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.08);
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+  --toastify-toast-background: #141414;
+  --toastify-font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --toastify-text-color-light: #f0f0f0;
+  --toastify-text-color-dark: #f0f0f0;
+  --toastify-text-color-info: #f0f0f0;
+  --toastify-text-color-success: #f0f0f0;
+  --toastify-text-color-warning: #0a0a0a;
+  --toastify-text-color-error: #f0f0f0;
+  --toastify-spinner-color: #60a5fa;
+  --toastify-spinner-color-empty-area: #333333;
+  --toastify-color-progress-light: #3b82f6;
+  --toastify-color-progress-dark: #60a5fa;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
 }
 
 *,
@@ -324,4 +353,44 @@ td {
 .admin-page pre {
   padding: 12px;
   overflow-x: auto;
+}
+
+/* Toastify 组件兜底 */
+.Toastify__toast-container {
+  color: var(--hermes-fg);
+}
+
+.Toastify__toast,
+.Toastify__toast-theme--light,
+.Toastify__toast-theme--dark {
+  background: var(--hermes-card) !important;
+  color: var(--hermes-fg) !important;
+  border: 1px solid var(--hermes-border) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+.Toastify__toast-body {
+  color: var(--hermes-fg) !important;
+}
+
+.Toastify__close-button {
+  color: var(--hermes-muted) !important;
+  opacity: 1;
+}
+
+.Toastify__close-button:hover {
+  color: var(--hermes-fg) !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--primary) !important;
+}
+
+.Toastify__progress-bar--info { background: var(--toastify-color-info) !important; }
+.Toastify__progress-bar--success { background: var(--toastify-color-success) !important; }
+.Toastify__progress-bar--warning { background: var(--toastify-color-warning) !important; }
+.Toastify__progress-bar--error { background: var(--toastify-color-error) !important; }
+
+.Toastify__toast-icon {
+  color: inherit !important;
 }
