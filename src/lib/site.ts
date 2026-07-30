@@ -10,8 +10,10 @@ export const siteConfig = {
   },
   nav: [
     { label: "首页", href: "/" },
+    { label: "歌秀", href: "/songs" },
+    { label: "相册", href: "/photos" },
+    { label: "影秀", href: "/videos" },
     { label: "日记", href: "/blog" },
-    { label: "标签", href: "/tags" },
     { label: "关于", href: "/about" },
   ],
 } as const;

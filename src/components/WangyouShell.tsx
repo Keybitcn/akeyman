@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FloatingPlayer } from "@/components/FloatingPlayer";
+import { MediaPlayerProvider } from "@/components/MediaPlayerContext";
 import { wangyou } from "@/lib/wangyou";
 import { siteConfig } from "@/lib/site";
 
@@ -13,6 +15,7 @@ export function WangyouShell({ children }: { children: React.ReactNode }) {
   }
 
   return (
+    <MediaPlayerProvider>
     <div className="wy-root">
       <div className="wy-topbar">
         <div className="wy-topbar-inner">
@@ -87,8 +90,7 @@ export function WangyouShell({ children }: { children: React.ReactNode }) {
 
       <div className="wy-footer">
         <div>
-          本站为 2007-01-12 网友天下个人地盘网页快照 1:1 重置版（已去除 FLASH
-          漂浮广告）
+          本站为 2007 网友天下个人地盘真实可互动重置版（歌秀/影秀站内播放 · 相册可浏览）
         </div>
         <div>
           原址：{wangyou.domain} · 用户：{wangyou.username} · 现域名：quna.fun
@@ -97,6 +99,8 @@ export function WangyouShell({ children }: { children: React.ReactNode }) {
           Powered by 网友天下回忆录 · Key Blog Reset
         </div>
       </div>
+      <FloatingPlayer />
     </div>
+    </MediaPlayerProvider>
   );
 }

@@ -2,12 +2,17 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { zhCN } from "date-fns/locale";
 import { MessageBox } from "@/components/MessageBox";
+import { PhotoGallery } from "@/components/PhotoGallery";
+import { SongList } from "@/components/SongList";
+import { VideoList } from "@/components/VideoList";
+import { VisitorBoard } from "@/components/VisitorBoard";
 import { getAllPosts } from "@/lib/posts";
 import { wangyou } from "@/lib/wangyou";
 
 export default function Home() {
   const posts = getAllPosts().slice(0, 5);
   const diaryCount = Math.max(posts.length, wangyou.blogLegacy.length);
+  const photoCount = wangyou.albums.reduce((n, a) => n + a.photos.length, 0);
 
   return (
     <div className="wy-page">
@@ -59,17 +64,9 @@ export default function Home() {
             <div className="wy-box-head">{wangyou.modules.video}</div>
             <div className="wy-box-body">
               <div className="wy-alt">
-                我目前共有 <span>{wangyou.videos.length}</span> 个影秀节目
+                我目前共有 <span>{wangyou.videos.length}</span> 个影秀节目 · 点击即可播放
               </div>
-              {wangyou.videos.map((v) => (
-                <div className="wy-video-item" key={v.title}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img className="wy-thumb" src={v.thumb} alt={v.title} />
-                  <div>
-                    <a href="#videos">{v.title}</a>
-                  </div>
-                </div>
-              ))}
+              <VideoList videos={wangyou.videos} limit={4} moreHref="/videos" />
             </div>
           </div>
 
@@ -137,38 +134,16 @@ export default function Home() {
             <div className="wy-box-head">{wangyou.modules.songs}</div>
             <div className="wy-box-body">
               <div className="wy-alt">
-                我目前共有 <span>{wangyou.songs.length}</span> 个歌秀节目
+                我目前共有 <span>{wangyou.songs.length}</span> 个歌秀节目 · 点歌名播放
               </div>
-              <table className="wy-table">
-                <thead>
-                  <tr>
-                    <th>歌曲名</th>
-                    <th>收听</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {wangyou.songs.map((song) => (
-                    <tr key={song}>
-                      <td>{song}</td>
-                      <td className="play">
-                        <span className="wy-play" title="复刻展示">
-                          ▶
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <SongList songs={wangyou.songs} limit={6} moreHref="/songs" />
             </div>
           </div>
 
           <div className="wy-box">
             <div className="wy-box-head">{wangyou.modules.visitors}</div>
             <div className="wy-box-body">
-              <div className="wy-alt">最近访客记录已随时光远去～</div>
-              <div style={{ color: "#888", textAlign: "center", padding: 8 }}>
-                （2007 快照中访客列表为空）
-              </div>
+              <VisitorBoard />
             </div>
           </div>
 
@@ -178,24 +153,7 @@ export default function Home() {
               <div className="wy-alt">
                 我目前共有 <span>{wangyou.radios.length}</span> 个播客节目
               </div>
-              <table className="wy-table">
-                <thead>
-                  <tr>
-                    <th>节目名</th>
-                    <th>收听</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {wangyou.radios.map((r) => (
-                    <tr key={r}>
-                      <td>{r}</td>
-                      <td className="play">
-                        <span className="wy-play">▶</span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <SongList songs={wangyou.radios} kind="radio" moreHref="/songs" />
             </div>
           </div>
 
@@ -203,19 +161,9 @@ export default function Home() {
             <div className="wy-box-head">{wangyou.modules.photo}</div>
             <div className="wy-box-body">
               <div className="wy-alt">
-                我目前共有 <span>{wangyou.photos.length}</span> 张照片
+                我目前共有 <span>{photoCount}</span> 张照片 · 点击放大
               </div>
-              <div className="wy-photos">
-                {wangyou.photos.map((src, i) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={src + i}
-                    className="wy-photo"
-                    src={src}
-                    alt={`photo-${i + 1}`}
-                  />
-                ))}
-              </div>
+              <PhotoGallery albums={wangyou.albums} compact />
             </div>
           </div>
         </div>
