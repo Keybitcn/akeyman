@@ -1,7 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/Sidebar";
-import { StatusBar } from "@/components/StatusBar";
+import { WangyouShell } from "@/components/WangyouShell";
 import type { PostMeta } from "@/lib/types";
 
 interface AppShellProps {
@@ -9,14 +8,6 @@ interface AppShellProps {
   posts: PostMeta[];
 }
 
-export function AppShell({ children, posts }: AppShellProps) {
-  return (
-    <div className="hermes-shell">
-      <Sidebar posts={posts} />
-      <div className="hermes-main">
-        <div className="hermes-content">{children}</div>
-        <StatusBar />
-      </div>
-    </div>
-  );
+export function AppShell({ children }: AppShellProps) {
+  return <WangyouShell>{children}</WangyouShell>;
 }

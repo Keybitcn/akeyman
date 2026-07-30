@@ -10,7 +10,7 @@ export const siteConfig = {
   },
   nav: [
     { label: "首页", href: "/" },
-    { label: "文章", href: "/blog" },
+    { label: "日记", href: "/blog" },
     { label: "标签", href: "/tags" },
     { label: "关于", href: "/about" },
   ],
