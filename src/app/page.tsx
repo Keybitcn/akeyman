@@ -53,7 +53,7 @@ export default function Home() {
             <div className="wy-box-head">{wangyou.modules.video}</div>
             <div className="wy-box-body">
               <div className="wy-alt">
-                我目前共有 <span>{wangyou.videos.length}</span> 个影秀节目 · 点击即可播放
+                我目前共有 <span>{wangyou.videos.length}</span> 个影秀节目 · 点击打开播放页
               </div>
               <VideoList videos={wangyou.videos} limit={4} moreHref="/videos" />
             </div>
@@ -123,7 +123,7 @@ export default function Home() {
             <div className="wy-box-head">{wangyou.modules.songs}</div>
             <div className="wy-box-body">
               <div className="wy-alt">
-                我目前共有 <span>{wangyou.songs.length}</span> 个歌秀节目 · 点歌名播放
+                我目前共有 <span>{wangyou.songs.length}</span> 个歌秀节目 · 点歌名在底部播放
               </div>
               <SongList songs={wangyou.songs} limit={6} moreHref="/songs" />
             </div>

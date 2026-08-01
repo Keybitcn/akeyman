@@ -32,132 +32,156 @@
     {
       "id": "s1",
       "title": "单车恋人",
-      "artist": "怀旧金曲",
-      "youtubeId": "qCQWQ87dqdw"
+      "artist": "后弦",
+      "src": "/music/单车恋人 - 后弦.mp3"
     },
     {
       "id": "s2",
       "title": "偏偏喜欢你",
       "artist": "陈百强",
-      "youtubeId": "qCQWQ87dqdw"
+      "src": "/music/偏偏喜欢你 - 陈百强.mp3"
     },
     {
       "id": "s3",
       "title": "One Night in 北京",
-      "artist": "信乐团 / 经典",
-      "youtubeId": "DYptgVvkVLQ"
+      "artist": "信乐团",
+      "src": "/music/One Night In 北京 - 信乐团.mp3"
     },
     {
       "id": "s4",
-      "title": "Schnappi小赖皮之歌",
-      "artist": "Schnappi",
-      "youtubeId": "Oe3FG4EOgyU"
+      "title": "my_humps",
+      "artist": "Black Eyed Peas",
+      "src": "/music/My Humps - Black Eyed Peas.mp3"
     },
     {
       "id": "s5",
-      "title": "my_humps",
-      "artist": "Black Eyed Peas",
-      "youtubeId": "iEe_eraFWWs"
+      "title": "深呼吸",
+      "artist": "羽·泉",
+      "src": "/music/深呼吸 - 羽·泉.mp3"
     },
     {
       "id": "s6",
-      "title": "催人泪下（感人）",
+      "title": "RIGHT HERE WAITING",
       "artist": "Richard Marx",
-      "youtubeId": "S_E2EHVxNAE"
+      "src": "/music/Right Here Waiting - Richard Marx.mp3"
     },
     {
       "id": "s7",
-      "title": "深呼吸",
-      "artist": "张惠妹",
-      "youtubeId": "Dxp7Zj3LEvU"
+      "title": "单恋高校",
+      "artist": "陈冠希",
+      "src": "/music/单恋高校 - 陈冠希.mp3"
     },
     {
       "id": "s8",
-      "title": "RIGHT HERE WAITING",
-      "artist": "Richard Marx",
-      "youtubeId": "S_E2EHVxNAE"
+      "title": "Dream Waltz",
+      "artist": "群星",
+      "src": "/music/Dream Waltz - 群星.mp3"
     },
     {
       "id": "s9",
-      "title": "单恋高校",
-      "artist": "怀旧日系/经典",
-      "youtubeId": "Oe3FG4EOgyU"
+      "title": "Schnappi (Original Schnappi Mix)",
+      "artist": "Schnappi",
+      "src": "/music/Schnappi (Original Schnappi Mix) - Schnappi.mp3"
     },
     {
       "id": "s10",
-      "title": "Dream Waltz",
-      "artist": "轻音乐",
-      "youtubeId": "lFcSrYw-ARY"
+      "title": "偏爱",
+      "artist": "张芸京",
+      "src": "/music/偏爱 - 张芸京.mp3"
+    },
+    {
+      "id": "s11",
+      "title": "吻不过瘾",
+      "artist": "花儿乐队",
+      "src": "/music/吻不过瘾 - 花儿乐队.mp3"
+    },
+    {
+      "id": "s12",
+      "title": "我想更懂你",
+      "artist": "潘玮柏_苏芮",
+      "src": "/music/我想更懂你 - 潘玮柏_苏芮.mp3"
+    },
+    {
+      "id": "s13",
+      "title": "放飞美丽",
+      "artist": "刘亦菲",
+      "src": "/music/放飞美丽 - 刘亦菲.mp3"
+    },
+    {
+      "id": "s14",
+      "title": "나만의 너",
+      "artist": "金贤雅",
+      "src": "/music/나만의 너 - 金贤雅.mp3"
     }
   ],
   "radios": [
     {
       "id": "r1",
       "title": "我想更懂你",
-      "artist": "王力宏 / 张韶涵",
-      "youtubeId": "DYptgVvkVLQ"
+      "artist": "潘玮柏_苏芮",
+      "src": "/music/我想更懂你 - 潘玮柏_苏芮.mp3"
     },
     {
       "id": "r2",
       "title": "放飞美丽 刘亦菲",
       "artist": "刘亦菲",
-      "youtubeId": "JKPVRyg01gg"
+      "src": "/music/放飞美丽 - 刘亦菲.mp3"
     },
     {
       "id": "r3",
       "title": "吻不过瘾",
-      "artist": "经典",
-      "youtubeId": "qCQWQ87dqdw"
+      "artist": "花儿乐队",
+      "src": "/music/吻不过瘾 - 花儿乐队.mp3"
     },
     {
       "id": "r4",
       "title": "单车恋人",
-      "artist": "经典",
-      "youtubeId": "S_E2EHVxNAE"
+      "artist": "后弦",
+      "src": "/music/单车恋人 - 后弦.mp3"
     },
     {
       "id": "r5",
       "title": "偏爱",
       "artist": "张芸京",
-      "youtubeId": "iEe_eraFWWs"
+      "src": "/music/偏爱 - 张芸京.mp3"
     }
   ],
   "videos": [
     {
       "id": "v1",
       "title": "周杰伦——《晴天》原版MV 很浪漫的哦 献给杰伦迷1",
-      "thumb": "https://i.ytimg.com/vi/DYptgVvkVLQ/hqdefault.jpg",
-      "youtubeId": "DYptgVvkVLQ"
+      "src": "/video/周杰伦——《晴天》原版MV 很浪漫的哦 献给杰伦迷1.mp4",
+      "thumb": "/uploads/archive/blog-pic1.jpg"
     },
     {
       "id": "v2",
       "title": "One night in 北京 Mtv",
-      "thumb": "https://i.ytimg.com/vi/DYptgVvkVLQ/hqdefault.jpg",
-      "youtubeId": "DYptgVvkVLQ"
+      "src": "/video/One night in 北京 Mtv.mp4",
+      "thumb": "/uploads/archive/blog-pic1.jpg"
     },
     {
       "id": "v3",
       "title": "超级经典喜剧大师卓别林搞笑短片",
-      "thumb": "https://i.ytimg.com/vi/JgGGIP7m-bQ/hqdefault.jpg",
-      "youtubeId": "JgGGIP7m-bQ"
+      "src": "/video/超级经典喜剧大师卓别林搞笑短片.mp4",
+      "thumb": "/uploads/archive/blog-pic1.jpg"
     },
     {
       "id": "v4",
       "title": "Schnappi 小鳄鱼（当年超火）",
-      "thumb": "https://i.ytimg.com/vi/Oe3FG4EOgyU/hqdefault.jpg",
-      "youtubeId": "Oe3FG4EOgyU"
+      "src": "/video/Schnappi 小鳄鱼（当年超火）.mp4",
+      "thumb": "/uploads/archive/blog-pic1.jpg"
     },
     {
       "id": "v5",
       "title": "Black Eyed Peas - My Humps",
-      "thumb": "https://i.ytimg.com/vi/iEe_eraFWWs/hqdefault.jpg",
-      "youtubeId": "iEe_eraFWWs"
+      "src": "/video/Black Eyed Peas - My Humps.mp4",
+      "thumb": "/uploads/archive/blog-pic1.jpg"
     },
     {
       "id": "v6",
       "title": "Richard Marx - Right Here Waiting",
-      "thumb": "https://i.ytimg.com/vi/S_E2EHVxNAE/hqdefault.jpg",
-      "youtubeId": "S_E2EHVxNAE"
+      "src": "/video/Richard Marx - Right Here Waiting.mp4",
+      "thumb": "/uploads/archive/blog-pic1.jpg"
     }
   ],
   "albums": [
@@ -166,9 +190,18 @@
       "name": "无聊",
       "cover": "/uploads/archive/avatar.jpg",
       "photos": [
-        { "src": "/uploads/archive/avatar.jpg", "caption": "形象照 · 2007" },
-        { "src": "/uploads/archive/blog-pic1.jpg", "caption": "美图收藏" },
-        { "src": "/uploads/e5-9b-be-e7-89-87_013.jpg-20.jpg", "caption": "站内上传" },
+        {
+          "src": "/uploads/archive/avatar.jpg",
+          "caption": "形象照 · 2007"
+        },
+        {
+          "src": "/uploads/archive/blog-pic1.jpg",
+          "caption": "美图收藏"
+        },
+        {
+          "src": "/uploads/e5-9b-be-e7-89-87_013.jpg-20.jpg",
+          "caption": "站内上传"
+        },
         {
           "src": "https://web.archive.org/web/20070112221753im_/http://img013.photo.wangyou.com/2006/8/28/717170/200611629598820_t.jpg",
           "caption": "相册缩略图 1"
@@ -184,8 +217,14 @@
       "name": "朋友与回忆",
       "cover": "/uploads/archive/blog-pic1.jpg",
       "photos": [
-        { "src": "/uploads/archive/blog-pic1.jpg", "caption": "2007 上传图" },
-        { "src": "/uploads/archive/avatar.jpg", "caption": "主人形象" },
+        {
+          "src": "/uploads/archive/blog-pic1.jpg",
+          "caption": "2007 上传图"
+        },
+        {
+          "src": "/uploads/archive/avatar.jpg",
+          "caption": "主人形象"
+        },
         {
           "src": "https://i.ytimg.com/vi/Oe3FG4EOgyU/hqdefault.jpg",
           "caption": "当年的歌 · Schnappi"
@@ -206,13 +245,37 @@
     }
   ],
   "nav": [
-    { "label": "首　页", "href": "/" },
-    { "label": "地　盘", "href": "/" },
-    { "label": "影　秀", "href": "/videos" },
-    { "label": "歌　秀", "href": "/songs" },
-    { "label": "相　册", "href": "/photos" },
-    { "label": "日　记", "href": "/blog" },
-    { "label": "关　于", "href": "/about" },
-    { "label": "标　签", "href": "/tags" }
+    {
+      "label": "首　页",
+      "href": "/"
+    },
+    {
+      "label": "地　盘",
+      "href": "/"
+    },
+    {
+      "label": "影　秀",
+      "href": "/videos"
+    },
+    {
+      "label": "歌　秀",
+      "href": "/songs"
+    },
+    {
+      "label": "相　册",
+      "href": "/photos"
+    },
+    {
+      "label": "日　记",
+      "href": "/blog"
+    },
+    {
+      "label": "关　于",
+      "href": "/about"
+    },
+    {
+      "label": "标　签",
+      "href": "/tags"
+    }
   ]
 }

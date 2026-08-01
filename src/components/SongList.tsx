@@ -7,7 +7,7 @@ type Song = {
   id: string;
   title: string;
   artist?: string;
-  youtubeId: string;
+  src: string;
 };
 
 export function SongList({
@@ -27,7 +27,7 @@ export function SongList({
     id: s.id,
     title: s.title,
     artist: s.artist,
-    youtubeId: s.youtubeId,
+    src: s.src,
     kind,
   }));
 
@@ -44,24 +44,20 @@ export function SongList({
         <tbody>
           {list.map((song) => {
             const active = current?.id === song.id && playing;
+            const track: PlayableTrack = {
+              id: song.id,
+              title: song.title,
+              artist: song.artist,
+              src: song.src,
+              kind,
+            };
             return (
               <tr key={song.id} className={active ? "wy-row-active" : undefined}>
                 <td>
                   <button
                     type="button"
                     className="wy-song-link"
-                    onClick={() =>
-                      play(
-                        {
-                          id: song.id,
-                          title: song.title,
-                          artist: song.artist,
-                          youtubeId: song.youtubeId,
-                          kind,
-                        },
-                        queue
-                      )
-                    }
+                    onClick={() => play(track, queue)}
                   >
                     {song.title}
                   </button>
@@ -72,18 +68,7 @@ export function SongList({
                     type="button"
                     className={`wy-play ${active ? "on" : ""}`}
                     title={active ? "播放中" : "点击播放"}
-                    onClick={() =>
-                      play(
-                        {
-                          id: song.id,
-                          title: song.title,
-                          artist: song.artist,
-                          youtubeId: song.youtubeId,
-                          kind,
-                        },
-                        queue
-                      )
-                    }
+                    onClick={() => play(track, queue)}
                   >
                     {active ? "♪" : "▶"}
                   </button>

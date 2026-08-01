@@ -17,7 +17,7 @@ export default function SongsPage() {
         <div className="wy-box-body">
           <div className="wy-alt">
             共 <span>{wangyou.songs.length}</span> 首 · 点击歌名或 ▶
-            在本站底部播放器中收听（YouTube 流媒体）
+            ，底部出现 MP3 播放条
           </div>
           <SongList songs={wangyou.songs} />
         </div>

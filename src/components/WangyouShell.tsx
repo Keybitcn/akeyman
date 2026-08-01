@@ -90,7 +90,7 @@ export function WangyouShell({ children }: { children: React.ReactNode }) {
 
       <div className="wy-footer">
         <div>
-          本站为 2007 网友天下个人地盘真实可互动重置版（歌秀/影秀站内播放 · 相册可浏览）
+          本站为 2007 网友天下个人地盘真实可互动重置版（本地 MP3 / 影秀独立页播放 · 相册可浏览）
         </div>
         <div>
           原址：{wangyou.domain} · 用户：{wangyou.username} · 现域名：quna.fun

@@ -16,7 +16,7 @@ export default function VideosPage() {
         <div className="wy-box-head">{wangyou.modules.video} · 全部影秀</div>
         <div className="wy-box-body">
           <div className="wy-alt">
-            共 <span>{wangyou.videos.length}</span> 个节目 · 点击封面或标题在本站播放
+            共 <span>{wangyou.videos.length}</span> 个节目 · 点击后打开独立页面播放
           </div>
           <VideoList videos={wangyou.videos} />
           <div className="wy-more">
