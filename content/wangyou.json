@@ -27,18 +27,7 @@
     "radio": "我收集好听的歌曲",
     "photo": "寡人的劣质照片和朋友"
   },
-  "blogLegacy": [
-    {
-      "date": "2006-11-08 12:23:34",
-      "title": "美图",
-      "html": "<p><font color=\"#009900\" size=\"3\"><strong>你也许错过了网络初期的赚钱机会，这次你一定不可以再错过！</strong></font></p><p><img src=\"/uploads/archive/blog-pic1.jpg\" alt=\"美图\" style=\"max-width:100%\"/></p>"
-    },
-    {
-      "date": "2006-11-10 03:13:36",
-      "title": "进来听音乐吧",
-      "html": "<p>进来听音乐吧～打开 <a href=\"/songs\">歌秀</a>，点歌名或 ▶ 就能在本站播放～</p>"
-    }
-  ],
+  "blogLegacy": [],
   "songs": [
     {
       "id": "s1",

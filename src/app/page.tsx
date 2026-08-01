@@ -10,8 +10,7 @@ import { getAllPosts } from "@/lib/posts";
 import { wangyou } from "@/lib/wangyou";
 
 export default function Home() {
-  const posts = getAllPosts().slice(0, 5);
-  const diaryCount = Math.max(posts.length, wangyou.blogLegacy.length);
+  const posts = getAllPosts().slice(0, 10);
   const photoCount = wangyou.albums.reduce((n, a) => n + a.photos.length, 0);
 
   return (
@@ -22,37 +21,27 @@ export default function Home() {
             <div className="wy-box-head">{wangyou.modules.blog}</div>
             <div className="wy-box-body">
               <div className="wy-alt">
-                我目前共有 <span>{diaryCount}</span> 篇日志
+                我目前共有 <span>{posts.length}</span> 篇日志
               </div>
 
-              {posts.map((post) => (
-                <div className="wy-diary-item" key={post.slug}>
-                  <h3>
-                    <span className="time">
-                      {format(new Date(post.date), "yyyy-MM-dd HH:mm:ss", {
-                        locale: zhCN,
-                      })}
-                    </span>
-                    <br />
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                  </h3>
-                  <div className="content">{post.excerpt}</div>
-                </div>
-              ))}
-
-              {wangyou.blogLegacy.map((item) => (
-                <div className="wy-diary-item" key={item.date + item.title}>
-                  <h3>
-                    <span className="time">{item.date}</span>
-                    <br />
-                    {item.title}
-                  </h3>
-                  <div
-                    className="content"
-                    dangerouslySetInnerHTML={{ __html: item.html }}
-                  />
-                </div>
-              ))}
+              {posts.length === 0 ? (
+                <p style={{ color: "#888" }}>暂无日记</p>
+              ) : (
+                posts.map((post) => (
+                  <div className="wy-diary-item" key={post.slug}>
+                    <h3>
+                      <span className="time">
+                        {format(new Date(post.date), "yyyy-MM-dd HH:mm:ss", {
+                          locale: zhCN,
+                        })}
+                      </span>
+                      <br />
+                      <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    </h3>
+                    <div className="content">{post.excerpt}</div>
+                  </div>
+                ))
+              )}
 
               <div className="wy-more">
                 <Link href="/blog">&gt;&gt; 查看我的日记</Link>
